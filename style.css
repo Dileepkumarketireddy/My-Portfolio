@@ -1,0 +1,113 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Section styling */
+section {
+    padding: 20px;
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.6); /* glass effect */
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.5s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Particle canvas */
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+    padding: 8px 15px;
+    background: #00adb5;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    background: #008c94;
+    transform: scale(1.05);
+}
+/* Navbar container */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 30px;
+    z-index: 1000;
+}
+
+/* Nav links container */
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+/* Button style links */
+.nav-links a {
+    padding: 8px 14px;
+    background: rgba(0, 173, 181, 0.9);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    background: #008c94;
+    transform: translateY(-2px);
+}
+
+/* Active click effect */
+.nav-links a:active {
+    transform: scale(0.95);
+}
